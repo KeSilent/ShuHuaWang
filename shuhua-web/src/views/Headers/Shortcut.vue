@@ -6,7 +6,7 @@
       <li><a class="red" href="#">注册</a></li>
       <li><a href="#">登陆</a></li>
     </ul>
-    <ul class="fr">
+    <ul class="fr hidden-xs-only">
       <li>
           <a>收藏</a>
       </li>

@@ -1,9 +1,6 @@
 <script>
-const serverSrc = 'http://localhost:8080/api/v1'
-const codefortag = '/codefortag'
-const tags = '/tags'
-const codeall = '/codeall'
-const codeforid = '/codeforid'
+const serverSrc = 'http://localhost:8081/v1'
+const news = '/news'
 
 const token = '12345678'
 const hasEnter = false
@@ -13,10 +10,7 @@ export default
   userSite, // 用户地址
   token, // 用户token身份
   serverSrc, // 服务器地址
-  codefortag, // 通过TagID获取代码列表
-  tags, // 获取全部标签
-  codeall, // 获取全部代码列表
-  codeforid, // 通过ID获取代码详细内容
+  news, // 获取新闻列表
   hasEnter // 用户登录状态
 }
 </script>
