@@ -28,21 +28,8 @@
   float:right;
   margin-right: 10px;
 }
-ul,
-ol {
-  list-style: none outside none;
-  padding: 0;
-  margin: 0;
-}
-ul li {
-  float: left; /* 往左浮动 */
-}
-ul li a {
-  color: #999; /* 设置文字颜色 */
-  text-decoration: none; /* 去掉下划线 */
-}
 
-ul li {
+.wrapper ul li {
   line-height: 30px;
 }
 .wrapper li {

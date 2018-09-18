@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" style="position:absolute; left:0; top:0; width:100%;height:100%;">
     <el-container style="height:100%">
         <el-header class="topbar" style="height:30px">
           <headershortcut></headershortcut>
@@ -10,7 +10,7 @@
         <el-header style="height:48px">
           <headermenu></headermenu>
         </el-header>
-        <el-main>
+        <el-main style="height:100%">
           <mainpage></mainpage>
         </el-main>
         <el-footer>Footer</el-footer>
@@ -38,7 +38,7 @@ export default{
 
 <style>
 .el-main {
-  padding: 10px;
+  padding: 0px;
 }
 .el-header{
   padding: 0;

@@ -1,6 +1,6 @@
 <template>
   <div class="art-nav">
-    <el-row :gutter="40">
+    <el-row>
       <el-col :span="6" :xs="24" class="art-logo">
         <a href="#"><img src="http://www.sctx.com/shop/templates/default/images/art/artlogo1.png"/></a>
       </el-col>

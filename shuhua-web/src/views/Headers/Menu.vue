@@ -91,7 +91,7 @@ export default {
   background-color: #4b382f;
 }
 .el-menu-demo {
-  height: 48px;
+  height: 49px;
   width: 93%;
   display: table;
   margin-left: auto;
