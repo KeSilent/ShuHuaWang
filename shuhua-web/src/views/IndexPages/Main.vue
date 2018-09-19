@@ -6,22 +6,33 @@
             </el-col>
         </el-row>
         <el-row>
-            <el-col :span="24"><div class="grid-content bg-purple-dark">sdfsf</div></el-col>
+            <el-col :span="24">
+                <fine></fine>
+            </el-col>
         </el-row>
         <el-row>
-            <el-col :span="24"><div class="grid-content bg-purple-dark">sdfsf</div></el-col>
+            <fineguohua></fineguohua>
+        </el-row>
+        <el-row>
+            <fineshufa></fineshufa>
         </el-row>
     </div>
 </template>
 <script>
-import Carousel from '../IndexPages/Carousel'
+import CarouselVue from './Carousel'
+import FineVue from './Fine'
+import FineShuFaVue from './FineShuFa'
+import FineGuoHuaVue from './FineGuoHua.vue';
 export default{
   data () {
     return {
     }
   },
   components: {
-    'carousel': Carousel
+    'carousel': CarouselVue,
+    'fine':FineVue,
+    'fineshufa':FineShuFaVue,
+    'fineguohua':FineGuoHuaVue
   }
 }
 </script>

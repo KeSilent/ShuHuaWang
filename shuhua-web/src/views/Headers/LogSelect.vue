@@ -1,10 +1,10 @@
 <template>
   <div class="art-nav">
-    <el-row>
-      <el-col :span="6" :xs="24" class="art-logo">
-        <a href="#"><img src="http://www.sctx.com/shop/templates/default/images/art/artlogo1.png"/></a>
+    <el-row type="flex" justify="space-between">
+      <el-col :span="4" :xs="24" class="art-logo">
+          <a href="#"><img src="http://www.sctx.com/shop/templates/default/images/art/artlogo1.png"/></a>
       </el-col>
-      <el-col :span="12" :xs="24" hidden-xs-only class="search">
+      <el-col :span="8" :xs="24" class="hidden-xs-only search">
         <el-input placeholder="请输入内容">
           <el-button slot="append" icon="el-icon-search"></el-button>
         </el-input>
@@ -14,7 +14,7 @@
           <li><a href="#">国画</a></li>
         </ul>
       </el-col>
-      <el-col :span="6" class="hidden-xs-only" >
+      <el-col :span="5" class="hidden-xs-only" >
         <a href="#">
           <img src="http://www.sctx.com/shop/templates/default/images/art/topadd.jpg"/>
         </a>
@@ -24,29 +24,29 @@
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
       formInline: {
-        user: '',
-        region: ''
+        user: "",
+        region: ""
       }
-    }
+    };
   },
   methods: {
-    onSubmit () {
-      console.log('submit!')
+    onSubmit() {
+      console.log("submit!");
     }
   }
-}
+};
 </script>
 <style>
 .art-nav {
-    padding: 20px 0;
+  padding: 20px 0;
 }
-.art-logo{
+.art-nav .art-logo {
   padding-top: 9px;
 }
-.search ul li{
+.art-nav .search ul li {
   float: left;
   padding: 6px 0 0 14px;
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="position:absolute; left:0; top:0; width:100%;height:100%;">
+  <div id="app" class="layout" style="position:absolute; left:0; top:0; width:100%;height:100%;">
     <el-container style="height:100%">
         <el-header class="topbar" style="height:30px">
           <headershortcut></headershortcut>
@@ -37,13 +37,14 @@ export default{
 </script>
 
 <style>
-.el-main {
+.layout .el-main {
   padding: 0px;
+  overflow:inherit;
 }
-.el-header{
+.layout .el-header{
   padding: 0;
 }
-.topbar {
+.layout .topbar {
   background: #FAFAFA !important;
   border-bottom: 1px #dcdedd solid;
 }

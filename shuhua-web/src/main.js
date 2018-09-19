@@ -6,8 +6,8 @@ import App from './App'
 import router from './router'
 import global_ from './components/Global'
 import { Button, Container, Row, Col, Form, Menu, MenuItem, Input, Header, Footer, Main, Carousel, CarouselItem, Card } from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
 import 'element-ui/lib/theme-chalk/display.css'
+import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
 Vue.prototype.GLOBAL = global_

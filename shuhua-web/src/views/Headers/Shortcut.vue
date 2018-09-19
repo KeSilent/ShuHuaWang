@@ -20,11 +20,11 @@
   </div>
 </template>
 <style>
-.fl {
+.wrapper .fl {
   float: left;
   margin-left: 10px;
 }
-.fr{
+.wrapper .fr{
   float:right;
   margin-right: 10px;
 }
@@ -43,12 +43,12 @@
   width: 100%;
 }
 
-.red {
+.wrapper .red {
   color: #e33333;
   text-decoration: none;
 }
 
-.topbar .spacer {
+.wrapper .topbar .spacer {
   overflow: hidden;
   margin: 11px 5px 0;
   width: 1px;

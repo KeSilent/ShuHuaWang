@@ -1,13 +1,13 @@
 <template>
-  <el-row>
-    <el-col :span="19">
+  <el-row class="carousel">
+    <el-col :xs="24" :lg="19">
       <el-carousel :interval="5000" arrow="always">
-        <el-carousel-item v-for="item in 4" :key="item">
-          <h3>{{ item.ntitle }}</h3>
+        <el-carousel-item v-for="item in lunbo">
+          <img :src='item' class="image">
         </el-carousel-item>
       </el-carousel>
     </el-col>
-    <el-col :span="5" class="consultation-panl">
+    <el-col :xs="24" :lg="5" class="consultation-panl">
         <h2 class="block">书画快讯
                  <el-button type="text">更多&gt;</el-button>
             </h2>
@@ -45,10 +45,10 @@ export default {
 </script>
 
 <style>
-.el-carousel__container {
-  height: 470px;
+.carousel .el-carousel__container {
+  height: 400px;
 }
-.el-carousel__item h3 {
+.carousel .el-carousel__item h3 {
   color: #475669;
   font-size: 18px;
   opacity: 0.75;
@@ -56,15 +56,15 @@ export default {
   margin: 0;
 }
 
-.el-carousel__item:nth-child(2n) {
+.carousel .el-carousel__item:nth-child(2n) {
   background-color: #99a9bf;
 }
 
-.el-carousel__item:nth-child(2n + 1) {
+.carousel .el-carousel__item:nth-child(2n + 1) {
   background-color: #d3dce6;
 }
 
-.consultation-panl h2 {
+.carousel .consultation-panl h2 {
   height: 36px;
   border-bottom: 1px dotted #dcdcdc;
   color: #555;
@@ -73,7 +73,7 @@ export default {
   font-size: 14px;
   line-height: 36px;
 }
-.consultation-panl .el-button {
+.carousel .consultation-panl .el-button {
   float: right;
   margin-right: 15px;
   color: #c9ad88;
@@ -82,7 +82,16 @@ export default {
   font-family: "SimSun";
 }
 
-.consultation-panl ul {
+.carousel .consultation-panl ul {
   display: inline-block;
 }
 </style>
+<script>
+export default {
+  data(){
+    return {
+      lunbo:["../../assets/1.jpeg","../../assets/2.jpg","../../assets/3.jpeg"]
+    }
+  }
+}
+</script>

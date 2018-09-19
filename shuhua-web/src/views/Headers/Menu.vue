@@ -90,34 +90,34 @@ export default {
   margin: auto;
   background-color: #4b382f;
 }
-.el-menu-demo {
+.menu .el-menu-demo {
   height: 49px;
   width: 93%;
   display: table;
   margin-left: auto;
   margin-right: auto;
 }
-.el-menu-demo .el-menu-item {
+.menu .el-menu-demo .el-menu-item {
   height: 48px;
   line-height: 50px;
   padding: 0px 40px;
   font-size: 16px;
 }
-#navinside {
+.menu #navinside {
   background-color: #cd2e10 !important;
   padding-left: 55px;
   padding-right: 55px;
 }
-#navinside a {
+.menu #navinside a {
   background-color: #cd2e10;
   color: #fff !important;
 }
-.el-menu-item.is-disabled {
+.menu .el-menu-item.is-disabled {
   opacity:1;
   cursor: pointer;
   background: #cd2e10 !important;
 }
-ul.dd-inner li{
+.menu ul.dd-inner li{
   height: 40px;
   border-top: 1px #f0f0f0 solid;
   padding: 0;
@@ -126,27 +126,27 @@ ul.dd-inner li{
   -moz-transition: .3s;
   -webkit-transition: .3s;
 }
-ul.dd-inner li h2 {
+.menu ul.dd-inner li h2 {
     font-size: 16px;
     font-style: normal;
     font-weight: normal;
 }
-ul.dd-inner li hot-item{
+.menu ul.dd-inner li hot-item{
   height: 48px;
   overflow: hidden;
 }
 
-.box-card {
+.menu .box-card {
   width: 205px;
   float: right;
   background: #fff;
 }
-.card-opacity{
+.menu .card-opacity{
   position: absolute;
   z-index: 9;
   width: 251px;
   margin: 0 auto;
-  height: 420px;
+  height: 470px;
   overflow: hidden;
   background-color:rgba(0,0,0,0);
 }
