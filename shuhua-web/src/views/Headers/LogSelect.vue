@@ -24,20 +24,20 @@
 </template>
 <script>
 export default {
-  data() {
+  data () {
     return {
       formInline: {
-        user: "",
-        region: ""
+        user: '',
+        region: ''
       }
-    };
+    }
   },
   methods: {
-    onSubmit() {
-      console.log("submit!");
+    onSubmit () {
+      console.log('submit!')
     }
   }
-};
+}
 </script>
 <style>
 .art-nav {

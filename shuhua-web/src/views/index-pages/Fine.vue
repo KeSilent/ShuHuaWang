@@ -20,3 +20,12 @@
         </el-card>
     </div>
 </template>
+<script>
+export default {
+  data () {
+    return {
+      currentDate: '¥2001'
+    }
+  }
+}
+</script>

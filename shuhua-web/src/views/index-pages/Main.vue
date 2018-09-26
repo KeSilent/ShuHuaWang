@@ -19,20 +19,24 @@
     </div>
 </template>
 <script>
+import bus from '@/config/event-bus.js'
 import CarouselVue from './Carousel'
 import FineVue from './Fine'
 import FineShuFaVue from './FineShuFa'
-import FineGuoHuaVue from './FineGuoHua.vue';
-export default{
+import FineGuoHuaVue from './FineGuoHua.vue'
+export default {
   data () {
     return {
     }
   },
   components: {
     'carousel': CarouselVue,
-    'fine':FineVue,
-    'fineshufa':FineShuFaVue,
-    'fineguohua':FineGuoHuaVue
+    'fine': FineVue,
+    'fineshufa': FineShuFaVue,
+    'fineguohua': FineGuoHuaVue
+  },
+  created: function () {
+    bus.$emit('menuIsShowEvent', true)
   }
 }
 </script>

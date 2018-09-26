@@ -1,28 +1,30 @@
 <template>
   <div id="app" class="layout" style="position:absolute; left:0; top:0; width:100%;height:100%;">
-    <el-container style="height:100%">
-        <el-header class="topbar" style="height:30px">
-          <headershortcut></headershortcut>
-        </el-header>
-        <el-header style="height:auto">
-          <headerlogselect></headerlogselect>
-        </el-header>
-        <el-header style="height:48px">
-          <headermenu></headermenu>
-        </el-header>
-        <el-main style="height:100%">
-          <mainpage></mainpage>
-        </el-main>
-        <el-footer>Footer</el-footer>
+    <el-container>
+      <el-header class="topbar" style="height:30px">
+        <headershortcut></headershortcut>
+      </el-header>
+      <el-header style="height:auto">
+        <headerlogselect></headerlogselect>
+      </el-header>
+      <el-header style="height:48px">
+        <headermenu></headermenu>
+      </el-header>
+      <el-main>
+        <router-view></router-view>
+      </el-main>
+      <el-footer>
+        <footervue></footervue>
+      </el-footer>
     </el-container>
   </div>
 </template>
 <script>
-import HeaderShortcut from '../Headers/Shortcut'
-import HeaderLogSelect from '../Headers/LogSelect'
-import HeaderMenu from '../Headers/Menu'
-import MainPage from '../IndexPages/Main'
-export default{
+import HeaderShortcut from '../headers/Shortcut'
+import HeaderLogSelect from '../headers/LogSelect'
+import HeaderMenu from '../headers/Menu'
+import FooterVue from './Footers'
+export default {
   data () {
     return {
     }
@@ -31,21 +33,20 @@ export default{
     'headershortcut': HeaderShortcut,
     'headerlogselect': HeaderLogSelect,
     'headermenu': HeaderMenu,
-    'mainpage': MainPage
+    'footervue': FooterVue
   }
 }
 </script>
 
 <style>
 .layout .el-main {
-  padding: 0px;
-  overflow:inherit;
+  padding: 1px 0px 0px 0px;
 }
-.layout .el-header{
+.layout .el-header {
   padding: 0;
 }
 .layout .topbar {
-  background: #FAFAFA !important;
+  background: #fafafa !important;
   border-bottom: 1px #dcdedd solid;
 }
 </style>

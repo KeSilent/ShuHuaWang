@@ -1,20 +1,20 @@
 <template>
   <div class="menu">
-    <el-menu :default-active="activeIndex2"
+    <el-menu router :default-active="$route.path"
     class="el-menu-demo"
     mode="horizontal"
-    @select="handleSelect"
+    @select="selectMenu"
     background-color="#4b382f"
     text-color="#fff"
     active-text-color="#ffd04b">
-        <el-menu-item index="0" id="navinside" class="hidden-xs-only" disabled>
+        <el-menu-item index="0" id="navinside" disabled class="hidden-xs-only">
           全部商品分类
         </el-menu-item>
-        <el-menu-item  :xs="24" index="1">首页</el-menu-item>
-        <el-menu-item  :xs="24" index="2">选画中心</el-menu-item>
-        <el-menu-item index="3">艺术家</el-menu-item>
+        <template v-for="item in menu">
+          <el-menu-item v-for="(itemch,key) in item.sub" :key="key" :xs="24" :default-active="itemch.active" :index="itemch.showPath">{{itemch.name}}</el-menu-item>
+        </template>
     </el-menu>
-    <div class="card-opacity hidden-xs-only">
+    <div class="card-opacity hidden-xs-only" v-show="isShow">
       <el-card class="box-card">
         <ul class="dd-inner">
           <li>
@@ -68,24 +68,32 @@
   </div>
 </template>
 <script>
+import menu from '@/config/menu-config.js'
+import bus from '@/config/event-bus.js'
+
 export default {
   data () {
     return {
-      activeIndex: '1',
-      activeIndex2: '1'
+      menu: menu,
+      isShow: true
     }
   },
+  mounted () {
+    var that = this
+    bus.$on('menuIsShowEvent', function (msg) {
+      that.isShow = msg
+      console.log(msg)
+    })
+  },
   methods: {
-    handleSelect (key, keyPath) {
-      console.log(key, keyPath)
-    }
+    selectMenu (key, keyPath) { }
   }
 }
 </script>
 <style>
 .menu {
   width: 100%;
-  height: 48px;
+  height: 49px;
   *text-align: center;
   margin: auto;
   background-color: #4b382f;
@@ -96,6 +104,10 @@ export default {
   display: table;
   margin-left: auto;
   margin-right: auto;
+}
+.menu .el-menu--horizontal {
+  border-right: none;
+  border-bottom: none;
 }
 .menu .el-menu-demo .el-menu-item {
   height: 48px;
@@ -113,25 +125,25 @@ export default {
   color: #fff !important;
 }
 .menu .el-menu-item.is-disabled {
-  opacity:1;
+  opacity: 1;
   cursor: pointer;
   background: #cd2e10 !important;
 }
-.menu ul.dd-inner li{
+.menu ul.dd-inner li {
   height: 40px;
   border-top: 1px #f0f0f0 solid;
   padding: 0;
   line-height: 0;
-  transition: .3s;
-  -moz-transition: .3s;
-  -webkit-transition: .3s;
+  transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
 }
 .menu ul.dd-inner li h2 {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: normal;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
 }
-.menu ul.dd-inner li hot-item{
+.menu ul.dd-inner li hot-item {
   height: 48px;
   overflow: hidden;
 }
@@ -141,13 +153,13 @@ export default {
   float: right;
   background: #fff;
 }
-.menu .card-opacity{
+.menu .card-opacity {
   position: absolute;
   z-index: 9;
   width: 251px;
   margin: 0 auto;
   height: 470px;
   overflow: hidden;
-  background-color:rgba(0,0,0,0);
+  background-color: rgba(0, 0, 0, 0);
 }
 </style>

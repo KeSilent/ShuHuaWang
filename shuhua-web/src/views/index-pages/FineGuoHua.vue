@@ -102,10 +102,10 @@
 </style>
 <script>
 export default {
-  data() {
+  data () {
     return {
-      currentDate: "¥2001"
-    };
+      currentDate: '¥2001'
+    }
   }
-};
+}
 </script>
